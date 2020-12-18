@@ -1,0 +1,12 @@
+{
+  "name": "code-extensions",
+  "version": "0.1.0",
+  "description": "extensions for code editor",
+  "repository": "git@github.com:kennyr87/code-extensions.git",
+  "author": "ken rogers",
+  "license": "GPL-3.0-or-later",
+  "private": true,
+  "workspaces": [
+    "task-provider-composer"
+  ]
+}
