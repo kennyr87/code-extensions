@@ -1,0 +1,44 @@
+{
+	"name": "@code-extensions/task-provider-composer",
+	"displayName": "Task Provider Composer",
+	"description": "Creates code tasks for Composer",
+	"version": "0.1.0",
+	"author": "ken rogers",
+	"engines": {
+		"node": "^14.15.1",
+		"vscode": "^1.45.0"
+	},
+	"activationEvents": [
+		"onCommand:workbench.action.tasks.runTask"
+	],
+	"main": "./out/extension",
+	"contributes": {
+		"taskDefinitions": [
+			{
+				"type": "composer",
+				"required": [
+					"script"
+				],
+				"properties": {
+					"script": {
+						"type": "string",
+						"description": "The script to execute"
+					}
+				}
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "yarn run compile",
+		"compile": "tsc -b",
+		"watch": "tsc -b -w"
+	},
+	"devDependencies": {
+		"@types/node": "^12.12.0",
+		"@typescript-eslint/eslint-plugin": "^3.0.2",
+		"@typescript-eslint/parser": "^3.0.2",
+		"eslint": "^7.1.0",
+		"typescript": "^4.0.2",
+		"@types/vscode": "^1.45.0"
+	}
+}
